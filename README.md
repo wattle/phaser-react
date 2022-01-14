@@ -44,3 +44,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Resources
+* https://rexrainbow.github.io/phaser3-rex-notes/docs/site/gameobject/
+* https://www.npmjs.com/package/phaser-asset-pack-hashing
+* https://github.com/PhaserEditor2D/starter-template-webpack
+* https://help.phasereditor2d.com/v3/
+* https://github.com/photonstorm/phaser3-typescript-project-template/blob/master/dist/assets/starfields.glsl.js
+* https://github.com/CodeAndWeb/TexturePacker-Phaser/blob/master/texturepacker-demo/index.html
+* https://www.codeandweb.com/texturepacker/tutorials/creating-spritesheets-for-phaser-with-texturepacker
+* https://www.codeandweb.com/texturepacker/tutorials/how-to-create-a-sprite-sheet
+* https://github.com/photonstorm/phaser-examples/blob/master/examples/camera/basic%20follow.js
