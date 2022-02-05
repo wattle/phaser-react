@@ -3,6 +3,7 @@
 
 import { textChangeRangeIsUnchanged } from 'typescript';
 import JsonPack from '../assets/asset-pack.json';
+import CrabShack from './phaser/CrabShack';
 import { worldHeight, worldWidth } from './World';
 
 // TODO move to recoilState
@@ -20,6 +21,7 @@ class MainScene extends Phaser.Scene {
     preload() {
         this.cameras.main.setBackgroundColor(0x98d687);
         this.load.addPack(JsonPack, 'preload');
+        this.input.mouse.enabled = true;
     }
 
     create() {
@@ -32,6 +34,12 @@ class MainScene extends Phaser.Scene {
 
         console.log("Bouncing logo?" );
         console.log(logo);
+
+        const shack = new CrabShack(this, 500, 250);
+        this.add.existing(shack);
+        shack.setInteractive(true);
+        shack.on('pointerup', () => { console.log("clicking in scnee")});
+
         this.tweens.add({
             targets: logo,
 
@@ -54,7 +62,11 @@ class MainScene extends Phaser.Scene {
         //this.physics.world.setBounds(0, 0, worldWidth, worldHeight, true, true, true, true);
         this.cameras.main.startFollow(player, true, 0.5, 0.5);
         player.setActive(true);
-    
+        this.input.on('gameobjectdown', this.onObjectClicked);
+    }
+
+    onObjectClicked(pointer:any, gameObject:any) {
+        console.log("game object is ", gameObject);
     }
 
     checkWorldLimits = (x : number, y: number) : boolean => {

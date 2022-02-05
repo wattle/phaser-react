@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { RecoilRoot } from 'recoil';
+import RecoilNexus from "recoil-nexus";
 import './App.css';
 import { InfoModal } from './components/ui/InfoModal';
 import World from './components/World';
@@ -18,6 +19,7 @@ const App:FC = () => {
 
   return (
     <RecoilRoot>
+      <RecoilNexus />
     <div className="App">
       <div id='hero' />
       <InfoModal />
