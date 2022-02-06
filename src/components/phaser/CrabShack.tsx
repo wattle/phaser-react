@@ -8,10 +8,10 @@ class CrabShack extends Phaser.GameObjects.Sprite {
     constructor(scene: Phaser.Scene, x: number, y: number) {
         super(scene, x, y, 'crabshack');
 
-        this.width = 100;
-        this.height = 100;
+        this.width = 300;
+        this.height = 300;
         this.setInteractive({ useHandCursor: true });
-        this.on('pointerdown', () => this.setModal());
+        this.on('pointerdown', () => this.setModal(), this);
         
     }
 

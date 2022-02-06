@@ -37,8 +37,6 @@ class MainScene extends Phaser.Scene {
 
         const shack = new CrabShack(this, 500, 250);
         this.add.existing(shack);
-        shack.setInteractive(true);
-        shack.on('pointerup', () => { console.log("clicking in scnee")});
 
         this.tweens.add({
             targets: logo,
@@ -53,7 +51,7 @@ class MainScene extends Phaser.Scene {
         player = this.add.sprite(position, (window.innerHeight / 2), 'player');
         //player.setVisible(true);
         player.setAlpha(0,0);
-        
+  
         // game.physics.p2.enable(player);
 
         cursors = this.input.keyboard.createCursorKeys();
